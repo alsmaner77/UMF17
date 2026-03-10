@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Interfaz.css">
+
+
+
+<title>Unidad Médica Familiar No.17</title>
+
+
+</head>
+<body>
+
+<header>
+  <div class="logo"> 
+    <img src="https://www.croc.org.mx/img/croc-imss/IMSS-Logo.jpg">
+    <h1>Unidad Médica Familiar No.17</h1>
+  </div>
+
+</header>
+
+	<!-- MENÚ -->
+   <h2> </h2>
+<nav>
+  <a onclick="mostrar('inicio')">Medicamentos Agotados</a>
+  <a onclick="mostrar('vacunas')">Esquema de Vacunación</a>
+  <a onclick="mostrar('altas')">Altas IMSS</a>
+  <a onclick="mostrar ('prestaciones')">Prestaciones Económicas</a>
+  <a onclick="mostrar('novedades')">Novedades</a>  
+</nav>
+<h2> </h2>
+				
+
+<!-- INICIO -->
+<section id="inicio" class="contenido">
+  
+
+  <h2>Disponibilidad de Medicamento en Farmacia</h2>
+  
+  <a>Verifique el medicamento con la clave de su receta médica.</a>
+  <h2></h2>
+  <div style="text-align: center; margin-top: 20px;">
+    <h3>Buscar Medicamento</h3>
+    
+    <input type="text" id="inputMedicamento" placeholder="Ej. Paracetamol" style="padding: 10px; width: 250px;">
+    
+    <button onclick="buscarEnGoogleSheets()" style="padding: 10px 20px; cursor: pointer;">Buscar</button>
+    
+    <p id="mensajeResultado" style="font-weight: bold; margin-top: 15px;"></p>
+</div>
+</section>
+
+<!-- Vacunas  -->
+<section id="vacunas" class="contenido">
+  
+  <h2>Niñas y Niños de 0-9 años</h2>
+  <h4>  </h4>
+ <div class="Cartillas">
+  <img src="c:\Users\larar\Documents\Cartillas\Cartilla Niñas y Niños de 0 a 9 años.jpg">
+ </div>
+  <h4> </h4>
+  <nav class="content">
+  <a onclick="mostrar('adolescentes')">Adolescentes de 10-19 Años</a>
+  <a onclick="mostrar('mujer')">Mujer 20-59 Años</a>
+  <a onclick="mostrar('hombre')">Hombre de 20-59 Años</a>
+  <a onclick="mostrar('mayores')">Adultos Mayores de 60 Años</a>  
+</nav>  
+</section>
+
+<section id="adolescentes" class="contenido">
+  <h2>Adolescentes de 10-19 Años</h2>
+  <h4>  </h4>
+ <div class="Cartillas">
+  <img src="c:\Users\larar\Documents\Cartillas\Cartilla Adolescentes 10 a 19 años.jpg">
+ </div>
+  <h4> </h4>
+  <nav class="content">
+  <a onclick="mostrar('vacunas')">Niñas y Niños de 0-9</a>
+  <a onclick="mostrar('mujer')">Mujer 20-59 Años</a>
+  <a onclick="mostrar('hombre')">Hombre de 20-59 Años</a>
+  <a onclick="mostrar('mayores')">Adultos Mayores de 60 Años</a>  
+</nav>  
+</section>
+
+<section id="mujer" class="contenido">
+  <h2>Mujer 20-59 Años</h2>
+  
+  <nav class="content">
+  <a onclick="mostrar('vacunas')">Niñas y Niños de 0-9</a>
+  <a onclick="mostrar('adolescentes')">Adolescentes de 10-19 Años</a>
+  <a onclick="mostrar('hombre')">Hombre de 20-59 Años</a>
+  <a onclick="mostrar('mayores')">Adultos Mayores de 60 Años</a>  
+</nav>  
+</section>
+
+<section id="hombre" class="contenido">
+  <h2>Hombre de 20-59 Años</h2>
+  <h4>  </h4>
+ <div class="Cartillas">
+  <img src="c:\Users\larar\Documents\Cartillas\Cartilla Hombres de 10 a 59 años.jpg">
+ </div>
+  <h4> </h4>
+  <nav class="content">
+  <a onclick="mostrar('vacunas')">Niñas y Niños de 0-9</a>
+  <a onclick="mostrar('adolescentes')">Adolescentes de 10-19 Años</a>
+  <a onclick="mostrar('mujer')">Mujer 20-59 Años</a>
+  <a onclick="mostrar('mayores')">Adultos Mayores de 60 Años</a>  
+</nav>  
+</section>
+
+<section id="mayores" class="contenido">
+  <h2>Adultos Mayores de 60 Años</h2>
+  <h4>  </h4>
+ <div class="Cartillas">
+  <img src="c:\Users\larar\Documents\Cartillas\Cartilla Personas Mayores 60 años o mas.jpg">
+ </div>
+  <h4> </h4>
+  <nav class="content">
+  <a onclick="mostrar('vacunas')">Niñas y Niños de 0-9</a>
+  <a onclick="mostrar('adolescentes')">Adolescentes de 10-19 Años</a>
+  <a onclick="mostrar('mujer')">Mujer 20-59 Años</a>
+  <a onclick="mostrar('hombre')">Hombre de 20-59 Años</a>  
+</nav>  
+</section>
+
+<!-- Prestaciones Economicas-->
+ <section id="prestaciones" class="contenido">
+  
+
+ <h2>Requisitos para Viudez</h2>
+ <h4>Se trata de pensionado</h4>
+ <a><strong style="color: black;">1.</strong>Reportar la baja con copia del Acta de Defunción y Número de Seguro Social en ventanilla 17 o correo electrónico: <strong style="color: black;">berna.rodriguezpo@imss.gob.mx</strong> </a>
+ <h4> </h4>
+ <a><strong style="color: black;">2.</strong>Verificar si no existe adeudo.</a>
+ <h4>
+
+ </h4>
+ <a><strong style="color: black;">3.</strong>Realizar solicitud con los siguientes documentos:</a>
+ <ul>
+  <li>Acta de Defunción Original.</li>
+  <li>Identificación Oficial en copia.</li>
+  <li>Número de Seguro Social en copia.</li>
+  <li>Comprobante de Domicilio en copia.</li>
+ </ul>
+ <h4>Esposa o Esposo:</h4>
+ <ul>
+  <li>Acta de Matrimonio Original Reciente (Menor a 90 días y posterior al día de defunción).</li>
+ </ul>
+ <h4>Concubinas:</h4>
+ <ul>
+  <li>Resolución de Testimonial de Concubinato del Juez civil.</li>
+  <li>Acta de Nacimiento original de Esposa.</li>
+  <li>CURP en copia.</li>
+  <li>INE (vigente) en copia.</li>
+  <li>Comprobante de Domicilio reciente (Menor a 3 meses).</li>
+  <li>Acreditamiento Bancario con CLABE Interbancaria.</li>
+ </ul>
+ <h4>Con Hijos:</h4>
+ <ul>
+  <li>Acta de Nacimiento Original.</li>
+  <li>CURP en copia.</li>
+  <li>Identificación Vigente en copia.</li>
+  <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
+  <li>Ivalido-Copia de ST-6.</li>
+ </ul>
+ <nav class="content">
+  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
+  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
+  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
+  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
+  <a onclick="mostrar('orfandad2')">Orfandad de Asegurado</a>
+  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
+  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
+  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
+</nav>
+ </section>
+
+ <!--Viudez de Asegurado-->
+ <section id="trabajador" class="contenido">
+  <h2>Requisitos para Viudez</h2>
+ <h4>Se trata de Asegurado(Trabajador)</h4>
+ <a><strong style="color: black;">1.</strong>Realizar Solicitud con los Siguientes Documentos:</a>
+ <ul>
+  <li>Constancia de Semanas (Oficina Aux. Administrativa).</li>
+  <li>Acta de Defunción original.</li>
+  <li>Acta de Nacimiento original.</li>
+  <li>Identificación Oficial en copia.</li>
+  <li>CURP copia.</li>
+  <li>Comprobante de Domicilio en copia.</li>
+  <li>Estado de Cuenta de AFORE (menor a 6 meses).</li>
+ </ul>
+ <h4>Con Esposa:</h4>
+ <ul>
+  <li>Acta de Matrimonio Original Reciente (menor a 90 días y posterior al día de defunción).</li>  
+ </ul>
+ <h4>Concubinas:</h4>
+ <ul>
+  <li>Resolución de Testimonial de Concubinato del Juez Civil.</li>
+  <li>Acta de Nacimiento Original de Esposa(o).</li>
+  <li>CURP.</li>
+  <li>INE (Vigente).</li>
+  <li>Acreditamiento Bancario con CLABE Interbancaria.</li>
+ </ul>
+ <h4>Con hijos:</h4>
+ <ul>
+  <li>Acta de Nacimiento.</li>
+  <li>CURP.</li>
+  <li>Identificación (Vigente).</li>
+  <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
+  <li>Invalido-Copia de ST-6.</li>
+ </ul>
+ <nav class="content">
+  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
+  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
+  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
+  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
+  <a onclick="mostrar('orfandad2')">Orfandad de Asegurado</a>
+  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
+  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
+  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
+</nav>
+ </section>
+
+ <!--Invalidez y RT-->
+ <section id="invalidez" class="contenido">
+  <h2>Requisitos para Invalidez y RT</h2>
+  <a><strong style="color: black;">1.</strong>Realizar una solicitud con los siguientes documentos:</a>
+  <ul>
+    <li>Número de Seguro Social (Copia del Dictamen).</li>
+    <li>Acta de Nacimiento original.</li>
+    <li>INE Vigente en copia.</li>
+    <li>CURP en copia.</li>
+    <li>Acreditamiento Bancario.</li>
+    <li>AFORE menor a 6 meses.</li>
+    <li>Comprobante de Domicilio en copia.</li>
+  </ul>
+  <h4>Con Esposa:</h4>
+  <ul>
+    <li>Acta de Matrimonio Original (menor a 90 días).</li>
+    <li>Acta de Nacimiento Original de Esposa.</li>
+    <li>CURP en copia.</li>
+    <li>INE Vigente en copia.</li>
+  </ul>
+  <h4>Con Hijos:</h4>
+  <ul>
+    <li>Acta de Nacimiento original.</li>
+    <li>CURP en copia.</li>
+    <li>Identificación Vigente en copia.</li>
+    <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
+    <li>Invalido-Copia de ST-6.</li>
+  </ul>
+  <nav class="content">
+  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
+  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
+  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
+  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
+  <a onclick="mostrar('orfandad2')">Orfandad de Asegurado</a>
+  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
+  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
+  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
+</nav>
+ </section>
+
+ <!--Cesantia o Vejez-->
+ <section id="vejez" class="contenido">
+  <h2>Requisitos para Cesantia o Vejez</h2>
+  <h4> </h4>
+  <ul>
+    <li>Constancia de Semanas (Oficina Aux.Administrativa).</li>
+    <li>Acta de Nacimiento Original.</li>
+    <li>INE Vigente en copia.</li>
+    <li>Comprobante de Domicilio en copia.</li>
+    <li>Acreditamiento Bancario con CLABE Interbancaria.</li>
+  </ul>
+  <h4>Con Esposa:</h4>
+  <ul>
+    <li>Acta de Matrimonio Original (menor a 90 días).</li>
+    <li>Acta de Nacimiento Original de Esposa.</li>
+    <li>CURP en copia.</li>
+    <li>INE Vigente en copia.</li>
+  </ul>
+  <h4>Con Hijos:</h4>
+  <ul>
+    <li>Acta de Nacimiento original.</li>
+    <li>CURP en copia.</li>
+    <li>Identificación con Fotografía Vigente en copia.</li>
+    <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
+    <li>Invalido-Copia de ST-6.</li>
+  </ul>
+  <nav class="content">
+  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
+  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
+  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
+  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
+  <a onclick="mostrar('orfandad2')">Orfandad de Asegurado</a>
+  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
+  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
+  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
+</nav>
+ </section>
+
+ <!--Orfandad de Pensionado-->
+ <section id="orfandad" class="contenido">
+  <h2>Orfandad de Pensionado</h2>
+  <h4>Se trata de Pensionado</h4>
+  <a><strong style="color: black;">1.</strong>Reportar la Baja con Copia del Acta de Defunción y Número de Seguro Social en Ventanilla 17 Reynosa, TAMPS o Correo Electrónico: <strong style="color: black;">berna.rodriguezpo@imss.gob.mx</strong></a>
+  <h4> </h4>
+  <a><strong style="color: black;">2.</strong>Verificar si no existe adeudo.</a>
+  <h4> </h4>
+  <a><strong style="color: black;">3.</strong>Realizar solicitud con los siguientes documentos:</a>
+  <ul>
+    <li>Acta de Defunción original.</li>
+    <li>Identificación Oficial en copia.</li>
+    <li>Número del Seguro Social en copia.</li>
+  </ul>
+  <h4>Tutor:</h4>
+  <ul>
+    <li>CURP en copia.</li>
+    <li>INE Vigente en copia.</li>
+    <li>Comprobante de Domicilio Reciente (menor a 3 meses).</li>
+    <li>Acreditamiento Bancario con CLABE Interbancaria.</li>
+    <li>Resolución de Tutela del Juez Civil Notariada.</li>
+  </ul>
+  <h4>Con Hijos:</h4>
+  <ul>
+    <li>Acta de Nacimiento original.</li>
+    <li>CURP en copia.</li>
+    <li>Identificación Vigente en copia.</li>
+    <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
+    <li>Invalido-Copia de ST-6.</li>
+  </ul>
+  <nav class="content">
+  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
+  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
+  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
+  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
+  <a onclick="mostrar('orfandad2')">Orfandad de Asegurado</a>
+  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
+  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
+  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
+</nav>
+ </section>
+
+ <!--Orfandad Asegurado-->
+ <section id="orfandad2" class="contenido">
+  <h2>Requisitos para Orfandad</h2>
+  <h4>Se trata de Asegurado</h4>
+  <h4> </h4>
+  <a><strong style="color: black;">1.</strong>Realizar solicitud con los siguientes documentos:</a>
+  <ul>
+    <li>Constancia de Semanas (Oficina Aux.Administrativa).</li>
+    <li>Acta de Defunción original.</li>
+    <li>Acta de Nacimiento original.</li>
+    <li>Identificación Oficial en copia.</li>
+    <li>CURP en copia.</li>
+    <li>Estado de Cuenta de AFORE (menor a 6 meses).</li>
+    <li>Comprobante de Domicilio, menor a 3 meses (o INE).</li>
+  </ul>
+  <h4>Tutor:</h4>
+  <ul>
+    <li>CURP en copia.</li>
+    <li>INE Vigente en copia.</li>
+    <li>Comprobante de Domicilio Reciente (menor a 3 meses).</li>
+    <li>Acreditamiento Bancario con CLABE Interbancaria.</li>
+    <li>Resolución de Tutela del Juez Civil.</li>
+  </ul>
+  <h4>Hijos:</h4>
+  <ul>
+    <li>Acta de Nacimiento original.</li>
+    <li>CURP en copia.</li>
+    <li>Identificación Vigente en copia.</li>
+    <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
+    <li>Invalido-Copia de ST-6.</li>  
+  </ul>
+  <nav class="content">
+  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
+  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
+  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
+  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
+  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
+  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
+  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
+  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
+</nav>
+ </section>
+
+ <!--Ascendiente-->
+ <section id="ascendiente" class="contenido">
+  <h2>Requisitos para Ascendiente</h2>
+  <h4>Se trata de Asegurado</h4>
+  <h4> </h4>
+  <a><strong style="color: black;">1.</strong>Realizar solicitud con los siguientes documentos:</a>
+  <ul>
+    <li>Constancia de Semanas (Oficina Aux.Administrativa).</li>
+    <li>Acta de Defunción original.</li>
+    <li>Acta de Nacimiento original.</li>
+    <li>Identificación Oficial en copia.</li>
+    <li>CURP en copia.</li>
+    <li>Comprobante de Domicilio en copia.</li>
+    <li>Estado de Cuenta de AFORE (menor a 6 meses).</li>
+  </ul>  
+  <h4>Ascendiente</h4>
+  <ul>
+    <li>Acta de Nacimiento Original de cada Padre.</li>
+    <li>CURP en copia.</li>
+    <li>Identificación Vigente en copia.</li>
+    <li>Dependencia Económica o Registro ante el IMSS en el Archivo.</li>
+    <li>Cuenta Bancaria.</li>
+  </ul>
+  <nav class="content">
+  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
+  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
+  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
+  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
+  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
+  <a onclick="mostrar ('orfandad2')">Orfandad de Asegurado</a>
+  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
+  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
+</nav>
+ </section>
+
+ <!--Gastos Funerarios-->
+ <section id="funerarios" class="contenido">
+  <h2>IMSS otorga ayuda para gastos funerarios a través de cuenta bancaria.</h2>
+  <h4><strong style="color: black;">1.</strong>Presentarse en cualquiera de las UMF diferentes para realizar el tramite.</h4>
+  <h4> </h4>
+  <h4><strong style="color: black;">2.</strong>Requisitos:</h4>
+  <h5>Original y Copia</h5>
+  <ul>
+    <li>Factura Cerificada Electrónicamente (a nombre de la persona que realiza el tramite).</li>
+    <li>Identificación Oficial del Finado y del Solicitante.</li>
+    <li>Estado de Cuenta Bancario a Nombre del Solicitante.</li>
+    <li>CURP del Solicitante.</li>
+    <li>Acta de Defunción.</li>
+    <li>Documento con Número de Seguro Social del Finado.</li>
+  </ul>
+  <nav class="content">
+  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
+  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
+  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
+  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
+  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
+  <a onclick="mostrar ('orfandad2')">Orfandad de Asegurado</a>
+  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
+  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
+</nav>
+ </section>
+
+ <section id="subsidios" class="contenido">
+  <h2>Pagos de Subsidios en Cuenta Bancaria</h2>
+  <a>Ahora puedes registrar tu cuenta bancaria para pago de incapacidades de una manera no presencial, enviando un correo electrónico a: <strong style= "color: black;">incapacidades.tamps@imss.gob.mx</strong></a>
+  <h4> </h4>
+  <a>Adjuntando la Siguiente Documentación:</a>
+  <ul>
+    <li>Solicitud de Acreditamiento en Cuenta, Proporcionada por el IMSS.</li>
+    <li>Documento con Número de Seguridad Social.</li>
+    <li>IFE o INE Vigente (por ambos lados).</li>
+    <li>Estado de Cuenta con CLABE Interbancaria (18 dígitos) no Mayor a 3 Meses.</li>
+    <li>Número Telefónico de Contacto.</li>
+  </ul>
+  <h4> </h4>
+  <h4>Beneficios:</h4>
+  <ul>
+    <li>Evita Gastos por Traslados.</li>
+    <li>Elimina la Pérdida de Tiempo en Filas.</li>
+    <li>Ausencia Laboral.</li>
+    <li>El Registro se Realiza por Única Ocasión.</li>
+  </ul>
+
+  <nav class="content">
+  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
+  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
+  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
+  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
+  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
+  <a onclick="mostrar ('orfandad2')">Orfandad de Asegurado</a>
+  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
+  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>  
+</nav>  
+
+ </section>
+
+<!-- Altas -->
+<section id="altas" class="contenido">    
+   
+<h2>Tramite de Esposos</h2>
+<h4>Original y Copia</h4>
+
+<ul>
+  
+  <li>CURP</li>
+  <li>1 Foto Reciente (Infantil).</li>
+  <li>Credencial de Elector.</li>
+  <li>Acta de Matrimonio Original (No mayor a 6 meses).</li>
+  </ul>
+  <h4> </h4>
+  <h4>Asegurado:</h4>
+  <ul>
+    <li>Número de Seguro Social.</li>
+    <li>Credencial de Elector.</li>
+    <li>Comprobante de Domicilio Reciente.</li>  
+  </ul>
+  <h5> </h5>
+  <a><strong>Ahora Puedes Darte de Alta en Línea: </strong></a>
+  <a href="https://share.google/XgTAFSPBpzrWuwNQy" style="color: #440503;">Tramita tu Alta</style></a>  
+  <h4> </h4>
+  <nav>
+  <a onclick="mostrar('concubinato')">Concubinato</a>
+  <a onclick="mostrar('hijos')">Hijos</a>
+  <a onclick="mostrar('padres')">Padres</a>
+  <a onclick="mostrar('asegurado')">Asegurado</a>  
+</nav>
+</section>
+
+<!-- Novedades -->
+<section id="novedades" class="contenido">
+  
+  <h2>Novedades</h2>
+  <div class="frame"> 
+    <iframe    
+    src="https://docs.google.com/presentation/d/1vzKL0wmX23WRj8KYnxf74hDk_CXlH3v6JmqqxuNJ04E/preview?slide=id.p#slide=id.p"
+    width="100%";
+    height="600px";
+    frameborder="0"></iframe>
+    
+</section>
+
+<!-- Altas Concubinato-->
+ <section id="concubinato" class="contenido">
+   
+<h2>Tramite de Concubinato</h2>
+<h4>Original y Copia</h4>
+<ul>
+  
+  <li>Numero de Seguro.</li>
+  <li>1 Foto Tamaño Infantil Reciente.</li>
+  <li>Comprobante de Domicilio Reciente.</li>
+  <li>Credencial de Elector.</li>
+  <li>CURP.</li>
+  </ul>
+  <h4> </h4>
+  <h4>Si tiene hijo(s) en común:</h4>
+  <ul>
+    <li>Acta de Nacimiento del Hijo.</li>      
+  </ul>
+  <h4> </h4>
+  <h4>Sin Hijos</h4>
+  <ul>
+    <li>Comprobar 5 Años de Convivencia.</li>
+    <h4>**Documentación de Ambos**</h4>
+  </ul>
+  <h5> </h5>
+  <a><strong>Ahora Puedes Darte de Alta en Línea: </strong></a>
+  <a href="https://share.google/XgTAFSPBpzrWuwNQy" style="color: #440503;">Tramita tu Alta</style></a>  
+  <h4> </h4>
+   
+    <nav>
+  <a onclick="mostrar('altas')">Esposos</a>  
+  <a onclick="mostrar('hijos')">Hijos</a>
+  <a onclick="mostrar('padres')">Padres</a>
+  <a onclick="mostrar('asegurado')">Asegurado</a>  
+</nav>
+  </section>
+
+  <!-- Altas Hijos-->
+  <section id="hijos" class="contenido">
+    
+<h2>Tramite de Hijos</h2>
+<h4>Original y Copia</h4>
+<ul> 
+  
+  <li>1 Foto Tamaño Infantil Reciente.</li>
+  <li>Acta de Nacimiento Original.</li>
+  <li>CURP.</li>
+  </ul>
+  <h4> </h4>
+  <h4>Asegurado:</h4>
+  <ul>
+    <li>Número de Seguro.</li>
+    <li>Credencial de Elector.</li>
+    <li>Comprobante de Domicilio.</li>      
+  </ul> 
+  <h5> </h5>
+  <a><strong>Ahora Puedes Darte de Alta en Línea: </strong></a>
+  <a href="https://share.google/XgTAFSPBpzrWuwNQy" style="color: #440503;">Tramita tu Alta</style></a>  
+  <h4> </h4> 
+  <nav>
+  <a onclick="mostrar('altas')">Esposos</a>  
+  <a onclick="mostrar('concubinato')">Concubinato</a>
+  <a onclick="mostrar('padres')">Padres</a>
+  <a onclick="mostrar('asegurado')">Asegurado</a>  
+</nav>
+  </section>
+
+  <!--Altas Padres-->
+  <section id="padres" class="contenido">
+    
+<h2>Tramite de Padres</h2>
+<h4>Original y Copia</h4>
+<ul> 
+  <li>Número de Seguro Social.</li>
+  <li>1 Foto Tamaño Infantil Reciente.</li>
+  <li>Comprobante de Domicilio Reciente.</li>
+  <li>Credencial de Elector (Mismo Domicilio).</li>
+  <li>CURP.</li>
+  <li>Acta de Nacimiento del Asegurado.</li>
+  <h4>**Documentación de Ambos**</h4>
+  </ul>
+  <h5> </h5>
+  <a><strong>Ahora Puedes Darte de Alta en Línea: </strong></a>
+  <a href="https://share.google/XgTAFSPBpzrWuwNQy" style="color: #440503;">Tramita tu Alta</style></a>  
+  <h4> </h4>
+  <nav>
+  <a onclick="mostrar('altas')">Esposos</a>  
+  <a onclick="mostrar('concubinato')">Concubinato</a>
+  <a onclick="mostrar('hijos')">Hijos</a>
+  <a onclick="mostrar('asegurado')">Asegurado</a>  
+</nav>
+  </section>
+
+  <!--Altas Asegurado-->
+  <section id="asegurado" class="contenido">
+     
+<h2>Tramite de Asegurado y/o Actualización de Datos</h2>
+<h4>Original y Copia</h4>
+<ul> 
+  <li>Numero de Seguro Social.</li>
+  <li>1 Foto Tamaño Infantil Reciente.</li>
+  <li>Comprobante de Domicilio Reciente.</li>
+  <li>Identificación Oficial.</li>  
+  </ul>
+  <h5> </h5>
+  <a><strong>Ahora Puedes Darte de Alta en Línea: </strong></a>
+  <a href="https://share.google/XgTAFSPBpzrWuwNQy" style="color: #440503;">Tramita tu Alta</style></a>  
+  <h4> </h4>
+  <nav>
+  <a onclick="mostrar('altas')">Esposos</a>  
+  <a onclick="mostrar('concubinato')">Concubinato</a>
+  <a onclick="mostrar('hijos')">Hijos</a>
+  <a onclick="mostrar('padres')">Padres</a>  
+</nav>
+  </section>
+
+
+
+<footer>
+  <a>Río Bravo, Tamaulipas</a>
+
+</footer>
+
+<script>
+function mostrar(seccion){
+  let sections = document.querySelectorAll("section");
+  sections.forEach(s => s.style.display = "none");
+  document.getElementById(seccion).style.display = "block";
+
+  // activar pestaña en menú
+  let links = document.querySelectorAll("nav a");
+  links.forEach(a => a.classList.remove("activo"));
+  event.target.classList.add("activo");
+}
+</script>
+
+<script>
+    function buscarEnGoogleSheets() {
+    // 1. Obtenemos lo que escribió el usuario, lo pasamos a minúsculas y quitamos espacios a los lados
+    const medicamentoBuscado = document.getElementById('inputMedicamento').value.toLowerCase().trim();
+    const mensaje = document.getElementById('mensajeResultado');
+    
+    if (medicamentoBuscado === "") {
+        mensaje.innerHTML = "Por favor, escribe el nombre de un medicamento.";
+        mensaje.style.color = "orange";
+        return;
+    }
+
+    mensaje.innerHTML = "Buscando...";
+    mensaje.style.color = "black";
+
+    // 2. Pon tu enlace de exportación CSV aquí (el que ya te funcionó)
+    const urlCSV = "https://docs.google.com/spreadsheets/d/1YUqtr_CQKkZyAu1oE7zEkHYL2R69qEkB/export?format=csv";
+
+    fetch(urlCSV)
+        .then(respuesta => respuesta.text())
+        .then(datos => {
+            // Pasamos todo el CSV a minúsculas
+            const datosEnMinusculas = datos.toLowerCase();
+
+            // 3. LA MAGIA: Cortamos el texto por comas o saltos de línea para crear un Array
+            // La expresión /[\n,]/ significa "corta cada vez que veas un salto de línea (\n) o una coma (,)"
+            const listaCeldas = datosEnMinusculas.split(/[\n,]/);
+
+            // 4. Buscamos si ALGUNA celda es EXACTAMENTE IGUAL a lo que escribió el usuario
+            const existe = listaCeldas.some(celda => celda.trim() === medicamentoBuscado);
+
+            // 5. Mostramos el resultado
+            if (existe) {
+                mensaje.innerHTML = "✅ Sí, el medicamento está disponible.";
+                mensaje.style.color = "green";
+            } else {
+                mensaje.innerHTML = "❌ No, el medicamento no se encuentra en la lista.";
+                mensaje.style.color = "red";
+            }
+        })
+        .catch(error => {
+            mensaje.innerHTML = "Hubo un error al conectar con la base de datos.";
+            mensaje.style.color = "red";
+            console.error(error);
+        });
+}
+</script>
+
+
+
+</body>
+
+</html>

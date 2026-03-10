@@ -565,56 +565,12 @@ function mostrar(seccion){
 </script>
 
 <script>
-    function buscarEnGoogleSheets() {
-    // 1. Obtenemos lo que escribió el usuario, lo pasamos a minúsculas y quitamos espacios a los lados
-    const medicamentoBuscado = document.getElementById('inputMedicamento').value.toLowerCase().trim();
-    const mensaje = document.getElementById('mensajeResultado');
-    
-    if (medicamentoBuscado === "") {
-        mensaje.innerHTML = "Por favor, escribe el nombre de un medicamento.";
-        mensaje.style.color = "orange";
-        return;
-    }
-
-    mensaje.innerHTML = "Buscando...";
-    mensaje.style.color = "black";
-
-    // 2. Pon tu enlace de exportación CSV aquí (el que ya te funcionó)
-    const urlCSV = "https://docs.google.com/spreadsheets/d/1YUqtr_CQKkZyAu1oE7zEkHYL2R69qEkB/export?format=csv";
-
-    fetch(urlCSV)
-        .then(respuesta => respuesta.text())
-        .then(datos => {
-            // Pasamos todo el CSV a minúsculas
-            const datosEnMinusculas = datos.toLowerCase();
-
-            // 3. LA MAGIA: Cortamos el texto por comas o saltos de línea para crear un Array
-            // La expresión /[\n,]/ significa "corta cada vez que veas un salto de línea (\n) o una coma (,)"
-            const listaCeldas = datosEnMinusculas.split(/[\n,]/);
-
-            // 4. Buscamos si ALGUNA celda es EXACTAMENTE IGUAL a lo que escribió el usuario
-            const existe = listaCeldas.some(celda => celda.trim() === medicamentoBuscado);
-
-            // 5. Mostramos el resultado
-            if (existe) {
-                mensaje.innerHTML = "✅ Sí, el medicamento está disponible.";
-                mensaje.style.color = "green";
-            } else {
-                mensaje.innerHTML = "❌ No, el medicamento no se encuentra en la lista.";
-                mensaje.style.color = "red";
-            }
-        })
-        .catch(error => {
-            mensaje.innerHTML = "Hubo un error al conectar con la base de datos.";
-            mensaje.style.color = "red";
-            console.error(error);
-        });
-}
+function buscarEnGoogleSheets(){const _0x2a1b=document['getElementById']('inputMedicamento')['value']['toLowerCase']()['trim'](),_0x4c3d=document['getElementById']('mensajeResultado');if(_0x2a1b===""){_0x4c3d['innerHTML']="Por\x20favor,\x20escribe\x20el\x20nombre\x20de\x20un\x20medicamento.";_0x4c3d['style']['color']="orange";return;}_0x4c3d['innerHTML']="Buscando...";_0x4c3d['style']['color']="black";const _0x6e5f="https://docs.google.com/spreadsheets/d/1YUqtr_CQKkZyAu1oE7zEkHYL2R69qEkB/export?format=csv";fetch(_0x6e5f)['then'](_0x8g7h=>_0x8g7h['text']())['then'](_0x1i9j=>{const _0x3k8l=_0x1i9j['toLowerCase'](),_0x5m7n=_0x3k8l['split'](/[\n,]/),_0x7o6p=_0x5m7n['some'](_0x9q5r=>_0x9q5r['trim']()===_0x2a1b);if(_0x7o6p){_0x4c3d['innerHTML']="\u2705\x20S\xED,\x20el\x20medicamento\x20est\xE1\x20disponible.";_0x4c3d['style']['color']="green";}else{_0x4c3d['innerHTML']="\u274C\x20No,\x20el\x20medicamento\x20no\x20se\x20encuentra\x20en\x20la\x20lista.";_0x4c3d['style']['color']="red";}})['catch'](_0x2s1t=>{_0x4c3d['innerHTML']="Hubo\x20un\x20error\x20al\x20conectar\x20con\x20la\x20base\x20de\x20datos.";_0x4c3d['style']['color']="red";console['error'](_0x2s1t);});}
 </script>
-
 
 
 </body>
 
 </html>
+
 

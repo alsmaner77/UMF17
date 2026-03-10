@@ -25,9 +25,45 @@
    <h2> </h2>
 <nav>
   <a onclick="mostrar('inicio')">Medicamentos Agotados</a>
-  <a onclick="mostrar('vacunas')">Esquema de Vacunación</a>
-  <a onclick="mostrar('altas')">Altas IMSS</a>
-  <a onclick="mostrar ('prestaciones')">Prestaciones Económicas</a>
+  <div class="dropdown">
+    <a onclick="mostrar('vacunas')" class="dropbtn">Esquema de Vacuanación ▾</a>
+
+    <div class="dropdown-content">
+      <a onclick="mostrar('vacunas')">Niñas y Niños de 0-9 Años</a>
+      <a onclick="mostrar('adolescentes')">Adolescentes de 10-19 Años</a>
+      <a onclick="mostrar('mujer')">Mujer 20-59 Años</a>
+      <a onclick="mostrar('hombre')">Hombre de 20-59 Años</a>
+      <a onclick="mostrar('mayores')">Adultos Mayores de 60 Años</a>    
+    </div>
+  </div>
+  
+  <div class="dropdown">
+    <a onclick="mostrar('altas')" class="dropbtn">Altas IMSS ▾</a>
+    
+    <div class="dropdown-content">
+      <a onclick="mostrar('altas')">Esposos</a>
+      <a onclick="mostrar('concubinato')">Concubinato</a>
+      <a onclick="mostrar('hijos')">Hijos</a>
+      <a onclick="mostrar('padres')">Padres</a>
+      <a onclick="mostrar('asegurado')">Asegurado</a>  
+    </div>
+  </div>
+  <div class="dropdown">
+    <a onclick="mostrar('prestaciones')" class="dropbtn">Prestaciones Económicas ▾</a>
+    <div class="dropdown-content">
+      <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
+      <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
+      <a onclick="mostrar('invalidez')">Invalidez y RT</a>
+      <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
+      <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
+      <a onclick="mostrar('orfandad2')">Orfandad de Asegurado</a>
+      <a onclick="mostrar ('ascendiente')">Ascendiente</a>
+      <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
+      <a onclick="mostrar ('subsidios')">Pago de Subsidios</a> 
+    </div>    
+</div>
+  
+
   <a onclick="mostrar('novedades')">Novedades</a>  
 </nav>
 <h2> </h2>
@@ -39,12 +75,7 @@
 
   <h2>Disponibilidad de Medicamento en Farmacia</h2>
   
-  
-	<ul>
-		<li>Los datos pueden ir cambiando durante el día.</li>
-		<li>Escriba unicamente el nombre completo del medicamento</li>
-	</ul>
-
+  <a>Verifique el medicamento con la clave de su receta médica.</a>
   <h2></h2>
   <div style="text-align: center; margin-top: 20px;">
     <h3>Buscar Medicamento</h3>
@@ -63,71 +94,43 @@
   <h2>Niñas y Niños de 0-9 años</h2>
   <h4>  </h4>
  <div class="Cartillas">
-  <img src="Cartilla Niñas y Niños de 0 a 9 años.jpg">
+  <img src="c:\Users\larar\Documents\Cartillas\Cartilla Niñas y Niños de 0 a 9 años.jpg">
  </div>
-  <h4> </h4>
-  <nav class="content">
-  <a onclick="mostrar('adolescentes')">Adolescentes de 10-19 Años</a>
-  <a onclick="mostrar('mujer')">Mujer 20-59 Años</a>
-  <a onclick="mostrar('hombre')">Hombre de 20-59 Años</a>
-  <a onclick="mostrar('mayores')">Adultos Mayores de 60 Años</a>  
-</nav>  
+   
 </section>
 
 <section id="adolescentes" class="contenido">
   <h2>Adolescentes de 10-19 Años</h2>
   <h4>  </h4>
  <div class="Cartillas">
-  <img src="Cartilla Adolescentes 10 a 19 años.jpg">
+  <img src="c:\Users\larar\Documents\Cartillas\Cartilla Adolescentes 10 a 19 años.jpg">
  </div>
-  <h4> </h4>
-  <nav class="content">
-  <a onclick="mostrar('vacunas')">Niñas y Niños de 0-9</a>
-  <a onclick="mostrar('mujer')">Mujer 20-59 Años</a>
-  <a onclick="mostrar('hombre')">Hombre de 20-59 Años</a>
-  <a onclick="mostrar('mayores')">Adultos Mayores de 60 Años</a>  
-</nav>  
+  
 </section>
 
 <section id="mujer" class="contenido">
   <h2>Mujer 20-59 Años</h2>
   
-  <nav class="content">
-  <a onclick="mostrar('vacunas')">Niñas y Niños de 0-9</a>
-  <a onclick="mostrar('adolescentes')">Adolescentes de 10-19 Años</a>
-  <a onclick="mostrar('hombre')">Hombre de 20-59 Años</a>
-  <a onclick="mostrar('mayores')">Adultos Mayores de 60 Años</a>  
-</nav>  
+  
 </section>
 
 <section id="hombre" class="contenido">
   <h2>Hombre de 20-59 Años</h2>
   <h4>  </h4>
  <div class="Cartillas">
-  <img src="Cartilla Hombres de 10 a 59 años.jpg">
+  <img src="c:\Users\larar\Documents\Cartillas\Cartilla Hombres de 10 a 59 años.jpg">
  </div>
-  <h4> </h4>
-  <nav class="content">
-  <a onclick="mostrar('vacunas')">Niñas y Niños de 0-9</a>
-  <a onclick="mostrar('adolescentes')">Adolescentes de 10-19 Años</a>
-  <a onclick="mostrar('mujer')">Mujer 20-59 Años</a>
-  <a onclick="mostrar('mayores')">Adultos Mayores de 60 Años</a>  
-</nav>  
+   
 </section>
 
 <section id="mayores" class="contenido">
   <h2>Adultos Mayores de 60 Años</h2>
   <h4>  </h4>
  <div class="Cartillas">
-  <img src="Cartilla Personas Mayores 60 años o mas.jpg">
+  <img src="c:\Users\larar\Documents\Cartillas\Cartilla Personas Mayores 60 años o mas.jpg">
  </div>
   <h4> </h4>
-  <nav class="content">
-  <a onclick="mostrar('vacunas')">Niñas y Niños de 0-9</a>
-  <a onclick="mostrar('adolescentes')">Adolescentes de 10-19 Años</a>
-  <a onclick="mostrar('mujer')">Mujer 20-59 Años</a>
-  <a onclick="mostrar('hombre')">Hombre de 20-59 Años</a>  
-</nav>  
+  
 </section>
 
 <!-- Prestaciones Economicas-->
@@ -170,16 +173,7 @@
   <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
   <li>Ivalido-Copia de ST-6.</li>
  </ul>
- <nav class="content">
-  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
-  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
-  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
-  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
-  <a onclick="mostrar('orfandad2')">Orfandad de Asegurado</a>
-  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
-  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
-  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
-</nav>
+ 
  </section>
 
  <!--Viudez de Asegurado-->
@@ -216,16 +210,7 @@
   <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
   <li>Invalido-Copia de ST-6.</li>
  </ul>
- <nav class="content">
-  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
-  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
-  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
-  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
-  <a onclick="mostrar('orfandad2')">Orfandad de Asegurado</a>
-  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
-  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
-  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
-</nav>
+ 
  </section>
 
  <!--Invalidez y RT-->
@@ -256,16 +241,7 @@
     <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
     <li>Invalido-Copia de ST-6.</li>
   </ul>
-  <nav class="content">
-  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
-  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
-  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
-  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
-  <a onclick="mostrar('orfandad2')">Orfandad de Asegurado</a>
-  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
-  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
-  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
-</nav>
+  
  </section>
 
  <!--Cesantia o Vejez-->
@@ -294,16 +270,7 @@
     <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
     <li>Invalido-Copia de ST-6.</li>
   </ul>
-  <nav class="content">
-  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
-  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
-  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
-  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
-  <a onclick="mostrar('orfandad2')">Orfandad de Asegurado</a>
-  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
-  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
-  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
-</nav>
+  
  </section>
 
  <!--Orfandad de Pensionado-->
@@ -336,16 +303,7 @@
     <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
     <li>Invalido-Copia de ST-6.</li>
   </ul>
-  <nav class="content">
-  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
-  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
-  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
-  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
-  <a onclick="mostrar('orfandad2')">Orfandad de Asegurado</a>
-  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
-  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
-  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
-</nav>
+  
  </section>
 
  <!--Orfandad Asegurado-->
@@ -379,16 +337,7 @@
     <li>Mayor a 16 años-Constancia de Estudios (incluyendo periodos vacacionales).</li>
     <li>Invalido-Copia de ST-6.</li>  
   </ul>
-  <nav class="content">
-  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
-  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
-  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
-  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
-  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
-  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
-  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
-  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
-</nav>
+  
  </section>
 
  <!--Ascendiente-->
@@ -414,16 +363,7 @@
     <li>Dependencia Económica o Registro ante el IMSS en el Archivo.</li>
     <li>Cuenta Bancaria.</li>
   </ul>
-  <nav class="content">
-  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
-  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
-  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
-  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
-  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
-  <a onclick="mostrar ('orfandad2')">Orfandad de Asegurado</a>
-  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>
-  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
-</nav>
+  
  </section>
 
  <!--Gastos Funerarios-->
@@ -441,16 +381,7 @@
     <li>Acta de Defunción.</li>
     <li>Documento con Número de Seguro Social del Finado.</li>
   </ul>
-  <nav class="content">
-  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
-  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
-  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
-  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
-  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
-  <a onclick="mostrar ('orfandad2')">Orfandad de Asegurado</a>
-  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
-  <a onclick="mostrar ('subsidios')">Pago de Subsidios</a>  
-</nav>
+  
  </section>
 
  <section id="subsidios" class="contenido">
@@ -474,16 +405,6 @@
     <li>El Registro se Realiza por Única Ocasión.</li>
   </ul>
 
-  <nav class="content">
-  <a onclick="mostrar('prestaciones')">Viudez de Pensionado</a>
-  <a onclick="mostrar('trabajador')">Viudez de Asegurado</a>
-  <a onclick="mostrar('invalidez')">Invalidez y RT</a>
-  <a onclick="mostrar('vejez')">Cesantia o Vejez</a>
-  <a onclick="mostrar('orfandad')">Orfandad de Pensionado</a>
-  <a onclick="mostrar ('orfandad2')">Orfandad de Asegurado</a>
-  <a onclick="mostrar ('ascendiente')">Ascendiente</a>
-  <a onclick="mostrar ('funerarios')">Gastos Funerarios</a>  
-</nav>  
 
  </section>
 
@@ -511,12 +432,7 @@
   <a><strong>Ahora Puedes Darte de Alta en Línea: </strong></a>
   <a href="https://share.google/XgTAFSPBpzrWuwNQy" style="color: #440503;">Tramita tu Alta</style></a>  
   <h4> </h4>
-  <nav>
-  <a onclick="mostrar('concubinato')">Concubinato</a>
-  <a onclick="mostrar('hijos')">Hijos</a>
-  <a onclick="mostrar('padres')">Padres</a>
-  <a onclick="mostrar('asegurado')">Asegurado</a>  
-</nav>
+  
 </section>
 
 <!-- Novedades -->
@@ -561,12 +477,7 @@
   <a href="https://share.google/XgTAFSPBpzrWuwNQy" style="color: #440503;">Tramita tu Alta</style></a>  
   <h4> </h4>
    
-    <nav>
-  <a onclick="mostrar('altas')">Esposos</a>  
-  <a onclick="mostrar('hijos')">Hijos</a>
-  <a onclick="mostrar('padres')">Padres</a>
-  <a onclick="mostrar('asegurado')">Asegurado</a>  
-</nav>
+    
   </section>
 
   <!-- Altas Hijos-->
@@ -591,12 +502,7 @@
   <a><strong>Ahora Puedes Darte de Alta en Línea: </strong></a>
   <a href="https://share.google/XgTAFSPBpzrWuwNQy" style="color: #440503;">Tramita tu Alta</style></a>  
   <h4> </h4> 
-  <nav>
-  <a onclick="mostrar('altas')">Esposos</a>  
-  <a onclick="mostrar('concubinato')">Concubinato</a>
-  <a onclick="mostrar('padres')">Padres</a>
-  <a onclick="mostrar('asegurado')">Asegurado</a>  
-</nav>
+  
   </section>
 
   <!--Altas Padres-->
@@ -617,12 +523,7 @@
   <a><strong>Ahora Puedes Darte de Alta en Línea: </strong></a>
   <a href="https://share.google/XgTAFSPBpzrWuwNQy" style="color: #440503;">Tramita tu Alta</style></a>  
   <h4> </h4>
-  <nav>
-  <a onclick="mostrar('altas')">Esposos</a>  
-  <a onclick="mostrar('concubinato')">Concubinato</a>
-  <a onclick="mostrar('hijos')">Hijos</a>
-  <a onclick="mostrar('asegurado')">Asegurado</a>  
-</nav>
+  
   </section>
 
   <!--Altas Asegurado-->
@@ -640,12 +541,7 @@
   <a><strong>Ahora Puedes Darte de Alta en Línea: </strong></a>
   <a href="https://share.google/XgTAFSPBpzrWuwNQy" style="color: #440503;">Tramita tu Alta</style></a>  
   <h4> </h4>
-  <nav>
-  <a onclick="mostrar('altas')">Esposos</a>  
-  <a onclick="mostrar('concubinato')">Concubinato</a>
-  <a onclick="mostrar('hijos')">Hijos</a>
-  <a onclick="mostrar('padres')">Padres</a>  
-</nav>
+  
   </section>
 
 
@@ -669,16 +565,55 @@ function mostrar(seccion){
 </script>
 
 <script>
-function buscarEnGoogleSheets(){const _0x2a1b=document['getElementById']('inputMedicamento')['value']['toLowerCase']()['trim'](),_0x4c3d=document['getElementById']('mensajeResultado');if(_0x2a1b===""){_0x4c3d['innerHTML']="Por\x20favor,\x20escribe\x20el\x20nombre\x20de\x20un\x20medicamento.";_0x4c3d['style']['color']="orange";return;}_0x4c3d['innerHTML']="Buscando...";_0x4c3d['style']['color']="black";const _0x6e5f="https://docs.google.com/spreadsheets/d/1YUqtr_CQKkZyAu1oE7zEkHYL2R69qEkB/export?format=csv";fetch(_0x6e5f)['then'](_0x8g7h=>_0x8g7h['text']())['then'](_0x1i9j=>{const _0x3k8l=_0x1i9j['toLowerCase'](),_0x5m7n=_0x3k8l['split'](/[\n,]/),_0x7o6p=_0x5m7n['some'](_0x9q5r=>_0x9q5r['trim']()===_0x2a1b);if(_0x7o6p){_0x4c3d['innerHTML']="\u2705\x20S\xED,\x20el\x20medicamento\x20est\xE1\x20disponible.";_0x4c3d['style']['color']="green";}else{_0x4c3d['innerHTML']="\u274C\x20No,\x20el\x20medicamento\x20no\x20se\x20encuentra\x20en\x20la\x20lista.";_0x4c3d['style']['color']="red";}})['catch'](_0x2s1t=>{_0x4c3d['innerHTML']="Hubo\x20un\x20error\x20al\x20conectar\x20con\x20la\x20base\x20de\x20datos.";_0x4c3d['style']['color']="red";console['error'](_0x2s1t);});}
+    function buscarEnGoogleSheets() {
+    // 1. Obtenemos lo que escribió el usuario, lo pasamos a minúsculas y quitamos espacios a los lados
+    const medicamentoBuscado = document.getElementById('inputMedicamento').value.toLowerCase().trim();
+    const mensaje = document.getElementById('mensajeResultado');
+    
+    if (medicamentoBuscado === "") {
+        mensaje.innerHTML = "Por favor, escribe el nombre de un medicamento.";
+        mensaje.style.color = "orange";
+        return;
+    }
+
+    mensaje.innerHTML = "Buscando...";
+    mensaje.style.color = "black";
+
+    // 2. Pon tu enlace de exportación CSV aquí (el que ya te funcionó)
+    const urlCSV = "https://docs.google.com/spreadsheets/d/1YUqtr_CQKkZyAu1oE7zEkHYL2R69qEkB/export?format=csv";
+
+    fetch(urlCSV)
+        .then(respuesta => respuesta.text())
+        .then(datos => {
+            // Pasamos todo el CSV a minúsculas
+            const datosEnMinusculas = datos.toLowerCase();
+
+            // 3. LA MAGIA: Cortamos el texto por comas o saltos de línea para crear un Array
+            // La expresión /[\n,]/ significa "corta cada vez que veas un salto de línea (\n) o una coma (,)"
+            const listaCeldas = datosEnMinusculas.split(/[\n,]/);
+
+            // 4. Buscamos si ALGUNA celda es EXACTAMENTE IGUAL a lo que escribió el usuario
+            const existe = listaCeldas.some(celda => celda.trim() === medicamentoBuscado);
+
+            // 5. Mostramos el resultado
+            if (existe) {
+                mensaje.innerHTML = "✅ Sí, el medicamento está disponible.";
+                mensaje.style.color = "green";
+            } else {
+                mensaje.innerHTML = "❌ No, el medicamento no se encuentra en la lista.";
+                mensaje.style.color = "red";
+            }
+        })
+        .catch(error => {
+            mensaje.innerHTML = "Hubo un error al conectar con la base de datos.";
+            mensaje.style.color = "red";
+            console.error(error);
+        });
+}
 </script>
 
 
 
 </body>
 
-
 </html>
-
-
-
-

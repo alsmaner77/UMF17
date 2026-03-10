@@ -24,7 +24,7 @@
 	<!-- MENÚ -->
    <h2> </h2>
 <nav>
-  <a onclick="mostrar('inicio')">Medicamentos en Farmacia</a>
+  <a onclick="mostrar('inicio')">Medicamentos Agotados</a>
   <div class="dropdown">
     <a onclick="mostrar('vacunas')" class="dropbtn">Esquema de Vacuanación ▾</a>
 
@@ -75,7 +75,10 @@
 
   <h2>Disponibilidad de Medicamento en Farmacia</h2>
   
-  <a>Verifique el medicamento con la clave de su receta médica.</a>
+  <ul>
+	  <li>Escribir únicamente el nombre completo del medicamento</li>
+	  <li>La información puede ir cambiando durante el día</li>
+  </ul>
   <h2></h2>
   <div style="text-align: center; margin-top: 20px;">
     <h3>Buscar Medicamento</h3>
@@ -110,7 +113,11 @@
 
 <section id="mujer" class="contenido">
   <h2>Mujer 20-59 Años</h2>
-  
+   <h4>  </h4>
+ <div class="Cartillas">
+  <img src="Cartilla Mujeres de 20 a 59 años.jpg">
+ </div>
+	
   
 </section>
 
@@ -565,13 +572,14 @@ function mostrar(seccion){
 </script>
 
 <script>
-function buscarEnGoogleSheets(){const _0x2a1b=document['getElementById']('inputMedicamento')['value']['toLowerCase']()['trim'](),_0x4c3d=document['getElementById']('mensajeResultado');if(_0x2a1b===""){_0x4c3d['innerHTML']="Por\x20favor,\x20escribe\x20el\x20nombre\x20de\x20un\x20medicamento.";_0x4c3d['style']['color']="orange";return;}_0x4c3d['innerHTML']="Buscando...";_0x4c3d['style']['color']="black";const _0x6e5f="https://docs.google.com/spreadsheets/d/1YUqtr_CQKkZyAu1oE7zEkHYL2R69qEkB/export?format=csv";fetch(_0x6e5f)['then'](_0x8g7h=>_0x8g7h['text']())['then'](_0x1i9j=>{const _0x3k8l=_0x1i9j['toLowerCase'](),_0x5m7n=_0x3k8l['split'](/[\n,]/),_0x7o6p=_0x5m7n['some'](_0x9q5r=>_0x9q5r['trim']()===_0x2a1b);if(_0x7o6p){_0x4c3d['innerHTML']="\u2705\x20S\xED,\x20el\x20medicamento\x20est\xE1\x20disponible.";_0x4c3d['style']['color']="green";}else{_0x4c3d['innerHTML']="\u274C\x20No,\x20el\x20medicamento\x20no\x20se\x20encuentra\x20en\x20la\x20lista.";_0x4c3d['style']['color']="red";}})['catch'](_0x2s1t=>{_0x4c3d['innerHTML']="Hubo\x20un\x20error\x20al\x20conectar\x20con\x20la\x20base\x20de\x20datos.";_0x4c3d['style']['color']="red";console['error'](_0x2s1t);});}
+function buscarEnGoogleSheets(){const _0x1a2b=document['getElementById']('inputMedicamento')['value']['toLowerCase']()['trim'](),_0x3c4d=document['getElementById']('mensajeResultado');if(_0x1a2b===""){_0x3c4d['innerHTML']="Por\x20favor,\x20escribe\x20el\x20nombre\x20de\x20un\x20medicamento.";_0x3c4d['style']['color']="orange";return;}_0x3c4d['innerHTML']="Buscando...";_0x3c4d['style']['color']="black";const _0x5e6f="https://docs.google.com/spreadsheets/d/1YUqtr_CQKkZyAu1oE7zEkHYL2R69qEkB/export?format=csv";fetch(_0x5e6f)['then'](_0x2m3n=>_0x2m3n['text']())['then'](_0x4o5p=>{const _0x7g8h=_0x4o5p['toLowerCase'](),_0x9i0j=_0x7g8h['split'](/[\n,]/),_0x1k2l=_0x9i0j['some'](_0x6q7r=>_0x6q7r['trim']()===_0x1a2b);if(_0x1k2l){_0x3c4d['innerHTML']="El\x20medicamento\x20se\x20encuentra\x20en\x20surtimiento.";_0x3c4d['style']['color']="red";}else{_0x3c4d['innerHTML']="\u2705\x20S\xED,\x20el\x20medicamento\x20est\xE1\x20disponible.";_0x3c4d['style']['color']="green";}})['catch'](_0x8s9t=>{_0x3c4d['innerHTML']="Hubo\x20un\x20error\x20al\x20conectar\x20con\x20la\x20base\x20de\x20datos.";_0x3c4d['style']['color']="red";console['error'](_0x8s9t);});}
 </script>
 
 
 </body>
 
 </html>
+
 
 
 

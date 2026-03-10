@@ -63,8 +63,10 @@ body {
     background-color: lightgray;
     display: flex;
     justify-content: center;
+    justify-content: center;  /* Centra los elementos horizontalmente */
+    align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     padding: 12px;
     height: auto;    
     border-radius: 30px;
@@ -135,7 +137,41 @@ body {
    .Cartillas img {
     width: 700px;
     height: 450px;
-    margin-left: 80px;
-    
+    margin-left: 80px;  
     
    }
+
+   
+.dropdown {
+  position: relative; 
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none; 
+  position: absolute; 
+  background-color: #f9f9f9; 
+  min-width: 160px; 
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+  z-index: 1; 
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; 
+  cursor: pointer;
+}
+
+
+.dropdown-content a:hover {
+  background-color: lightgrey;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

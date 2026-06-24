@@ -135,10 +135,10 @@ body {
   }
 
    .Cartillas img {
-    width: 700px;
+    width: 100%;
     height: 450px;
-    margin-left: 80px;  
-    
+    margin-left: 80px;
+    object-fit: cover;    
    }
 
    

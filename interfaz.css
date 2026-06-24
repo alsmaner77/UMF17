@@ -175,3 +175,15 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.Frame img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 8px; 
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+   }
+
+   .Lista {
+    margin-bottom: 12px;   
+    line-height: 1.5;
+   }
